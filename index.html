@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.js"></script>
+    <title>Tests MartingGale</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .siteBody{
+            width: 80vw;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="siteBody">
+        <header>
+            <h1>Visualizador de MartingGale</h1>
+        </header>
+        <canvas id="myLineChart"></canvas>
+        <div class="options">
+            <div id="operationValue">
+                <label for="operationValue">Valor de Operação</label>
+                <input type="number" name="operationValue" id="iOperationValue" placeholder="0.1" min="0.1" value="0.1" step="0.1">
+            </div>
+            <div id="payOutValue">
+                <label for="payOutValue">PayOut</label>
+                <input type="number" name="payOutValue" id="ipayOutValue" placeholder="0.8" min="0.1" value="0.8" step="0.1">
+            </div>
+            <div id="TestsValue">
+                <label for="TestsValue">Quantidade de Testes (Exige Performace do Computador)</label>
+                <input type="number" name="TestsValue" id="iTestsValue" placeholder="3000" min="1" value="3000" step="100">
+            </div>
+            <div id="LossLimitValue">
+                <label for="LossLimitValue">Limite de Loss (0 para tirar)</label>
+                <input type="number" name="LossLimitValue" id="iLossLimitValue" placeholder="0" min="0" value="0" step="0.1">
+            </div>
+            <div id="MGTValue">
+                <label for="MGTValue">Taxa de MartingGale</label>
+                <input type="number" name="MGTValue" id="iMGTValue" placeholder="2" min="0" value="2" step="0.1">
+            </div>
+            <div id="BankValue">
+                <label for="BankValue">Banca Inicial (%)</label>
+                <input type="number" name="BankValue" id="iBankValue" placeholder="50" min="0" value="50" step="10">
+            </div>
+            <div id="RightValue">
+                <label for="RightValue">Taxa de Acerto (%)</label>
+                <input type="number" name="RightValue" id="iRightValue" placeholder="50" max="100" min="0" value="50" step="5">
+            </div>
+            <div id="submit">
+                <input type="submit" value="Testar" id="submitButton">
+            </div>
+        </div>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>
